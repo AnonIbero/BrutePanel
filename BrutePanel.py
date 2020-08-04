@@ -99,7 +99,7 @@ de lo contrario, te devolvera error
                                 a = requests.get(f"{argumento3}"+str(leer))
                                 a.raise_for_status()
                                 if a.status_code == 200:
-                                    txt1 = open("Panel_Admin_encontrado","a+")
+                                    txt1 = open("Panel_Admin_encontrado.txt","a+")
                                     txt1.write(str(argumento3)+str(leer))
                                     print(f"Correcto > {str(argumento3)+str(leer)}")
                             else:
@@ -107,8 +107,8 @@ de lo contrario, te devolvera error
                                 a = requests.get(str(z)+str(leer))
                                 a.raise_for_status()
                                 if a.status_code == 200:
-                                    txt1 = open("Panel_Admin_encontrado","a+")
-                                    txt1.write(str(argumento3)+str(leer))
+                                    txt1 = open("Panel_Admin_encontrado.txt","a+")
+                                    txt1.write(f"{str(z)+str(leer)}")
                                     print(f"Correcto > {str(z)+str(leer)}")
 
                         except HTTPError as error:
